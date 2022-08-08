@@ -1,3 +1,6 @@
+$PSNativeCommandUseErrorActionPreference = $true
+$ErrorActionPreference = 'Stop'
+
 $refVM = "docker1" 
 $oldVM = Get-VM $refVM
 $switch = (Get-VMNetworkAdapter -VMName $oldVM.name).SwitchName
@@ -15,7 +18,7 @@ cmd /c copy /z $Source $Destination
 Write-Host "Creating new VM"
 New-VM -Name $newVM `
 -MemoryStartupBytes 512MB `
--Generation 2
+-Generation 2 `
 -VHDPath $Destination `
 -SwitchName $switch `
 
