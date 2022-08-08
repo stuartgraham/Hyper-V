@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $templateVM = "ubuntu-2004-template"
 $refVM = Get-VM $templateVM
 $switch = (Get-VMNetworkAdapter -VMName $refVM.name).SwitchName
-Write-Host $switch[0]
+Write-Host $switch
 $firmware = Get-VMFirmware $refVM.name
 $newVM = Read-Host "Enter new hostname"
 
