@@ -1,10 +1,11 @@
 $PSNativeCommandUseErrorActionPreference = $true
 $ErrorActionPreference = 'Stop'
 
-$refVM = "docker1" 
-$oldVM = Get-VM $refVM
-$switch = (Get-VMNetworkAdapter -VMName $refVM).SwitchName
-$firmware = Get-VMFirmware $refVM
+$refVM = "docker1"
+$refVM = Get-VM $refVM
+$switch = (Get-VMNetworkAdapter -VMName $refVM.name).SwitchName
+Write-Host $switch
+$firmware = Get-VMFirmware $refVM.name
 $newVM = Read-Host "Enter new hostname"
 
 Write-Host "Shutting down template machine"
