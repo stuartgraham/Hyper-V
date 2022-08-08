@@ -23,7 +23,7 @@ New-VM -Name $newVM `
 -VHDPath $Destination `
 -SwitchName $switch
 
-Set-VMFireware $newVM -SecureBootTemplate $firmware.SecureBootTemplate
+Set-VMFirmware $newVM -SecureBootTemplate $firmware.SecureBootTemplate
 Write-Host "Starting new VM"
 Start-VM $newVM
 Write-Host "Starting template VM"
