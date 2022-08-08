@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 
 $refVM = "docker1" 
 $oldVM = Get-VM $refVM
-$switch = (Get-VMNetworkAdapter -VMName $refVM.name).SwitchName
+$switch = (Get-VMNetworkAdapter -VMName $refVM).SwitchName
 $firmware = Get-VMFirmware $refVM
 $newVM = Read-Host "Enter new hostname"
 
