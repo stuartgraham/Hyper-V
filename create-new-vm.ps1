@@ -20,7 +20,7 @@ New-VM -Name $newVM `
 -MemoryStartupBytes 512MB `
 -Generation 2 `
 -VHDPath $Destination `
--SwitchName $switch `
+-SwitchName $switch
 
 Set-VMFireware $newVM -SecureBootTemplate $firmware.SecureBootTemplate
 Write-Host "Starting new VM"
