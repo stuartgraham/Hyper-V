@@ -17,7 +17,7 @@ $Destination = "V:\VM\Virtual Hard Disks\$newVM.vhdx"
 cmd /c copy /z $Source $Destination
 
 Write-Host "Creating new VM"
-New-VM -Name $newVM `
+$build = New-VM -Name $newVM `
 -MemoryStartupBytes 512MB `
 -Generation 2 `
 -VHDPath $Destination `
