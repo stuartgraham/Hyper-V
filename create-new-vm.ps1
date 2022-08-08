@@ -17,7 +17,7 @@ cmd /c copy /z $Source $Destination
 
 Write-Host "Creating new VM"
 $build = New-VM -Name $newVM `
--MemoryStartupBytes 512MB `
+-MemoryStartupBytes 1024MB `
 -Generation 2 `
 -VHDPath $Destination `
 -SwitchName $switch
