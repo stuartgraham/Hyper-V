@@ -27,7 +27,7 @@ Stop-VM $templateVM
 
 # copy VHDX
 Write-Host "Copying VHDX"
-$Source = "V:\VM\Virtual Hard Disks\ubuntu-template.vhdx"
+$Source = "V:\VM\Virtual Hard Disks\$templateVM.vhdx"
 $Destination = "V:\VM\Virtual Hard Disks\$newVM.vhdx"
 cmd /c copy /z $Source $Destination
 
