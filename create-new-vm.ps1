@@ -5,12 +5,12 @@ $ErrorActionPreference = 'Stop'
 # Multi choice prompt
 Write-Host "Select template type"
 Write-Host "[1] Ubuntu 20.04 LTS [2] Ubuntu 22.04 LTS"
-$templateVM = Read-Host -Prompt "Choice"
-Switch ($templateVM)
+$choice = Read-Host -Prompt "Choice"
+Switch ($choice)
 {
-    default {"ubuntu-2004-template"}
-    1 {"ubuntu-2004-template"}
-    2 {"ubuntu-2204-template"}
+    default {$templateVM = "ubuntu-2004-template"}
+    1 {$templateVM = "ubuntu-2004-template"}
+    2 {$templateVM = "ubuntu-2204-template"}
 }
 
 # Build varables
