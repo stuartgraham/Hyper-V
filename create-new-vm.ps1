@@ -3,9 +3,9 @@ $PSNativeCommandUseErrorActionPreference = $true
 $ErrorActionPreference = 'Stop'
 
 # Multi choice prompt
-Write-Host "Select template type:"
+Write-Host "Select template type"
 Write-Host "[1] Ubuntu 20.04 LTS [2] Ubuntu 22.04 LTS"
-$templateVM = Read-Host -Prompt "Choice:"
+$templateVM = Read-Host -Prompt "Choice"
 Switch ($templateVM)
 {
     default {"ubuntu-2004-template"}
